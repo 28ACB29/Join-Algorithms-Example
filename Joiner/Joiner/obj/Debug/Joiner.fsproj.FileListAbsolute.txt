@@ -1,0 +1,9 @@
+C:\Users\arthu\source\repos\Joiner\Joiner\bin\Debug\Joiner.XML
+C:\Users\arthu\source\repos\Joiner\Joiner\bin\Debug\Joiner.dll
+C:\Users\arthu\source\repos\Joiner\Joiner\bin\Debug\Joiner.pdb
+C:\Users\arthu\source\repos\Joiner\Joiner\bin\Debug\System.ValueTuple.dll
+C:\Users\arthu\source\repos\Joiner\Joiner\bin\Debug\System.ValueTuple.xml
+C:\Users\arthu\source\repos\Joiner\Joiner\obj\Debug\Joiner.fsprojAssemblyReference.cache
+C:\Users\arthu\source\repos\Joiner\Joiner\obj\Debug\Joiner.fsproj.CopyComplete
+C:\Users\arthu\source\repos\Joiner\Joiner\obj\Debug\Joiner.dll
+C:\Users\arthu\source\repos\Joiner\Joiner\obj\Debug\Joiner.pdb
