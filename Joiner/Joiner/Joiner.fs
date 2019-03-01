@@ -9,15 +9,19 @@ module Joins =
         let lengthB:int = Seq.length B
         match lengthA < lengthB with
         | true ->
-            let dictionaryA:Dictionary<'c,'a> = Dictionary<'c,'a>(lengthA)
-            Seq.iter (fun (a:'a) -> dictionaryA.[projectionA a] <- a) A
+            let dictionaryA:Map<'c,'a> =
+                A
+                |> Seq.map (fun (a:'a) -> (projectionA a, a))
+                |> Map.ofSeq
             Seq.map (fun (b:'b) -> (dictionaryA.[projectionB b], b)) B
         | false ->
-            let dictionaryB:Dictionary<'c,'b> = Dictionary<'c,'b>(lengthB)
-            Seq.iter (fun (b:'b) -> dictionaryB.[projectionB b] <- b) B
+            let dictionaryB:Map<'c,'b> =
+                B
+                |> Seq.map (fun (b:'b) -> (projectionB b, b))
+                |> Map.ofSeq
             Seq.map (fun (a:'a) -> (a, dictionaryB.[projectionA a])) A
 
-    let mergeJoin (A:'a seq) (B:'b seq) (projectionA:'a ->'c)  (projectionB:'b -> 'c):('a * 'b) seq =
+    let mergeJoin (A:'a seq) (B:'b seq) (projectionA:'a ->'c) (projectionB:'b -> 'c):('a * 'b) seq =
         let sortedA:'a list =
             A
             |> Seq.toList
